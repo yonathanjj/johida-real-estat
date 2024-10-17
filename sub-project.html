@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Johida Real Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+          font-family: 'Josefin Sans', sans-serif;
+          background-color: #f9f9f9;
+        }
+        /* Additional styles can be added here */
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="absolute top-5 left-5">
+    <img src="event4.jpg" alt="Johida Real Estate Logo" class="w-16 md:w-20">
+</div>
+<div class="absolute top-5 right-5">
+    <button class="block w-8 h-8 text-black hover:opacity-80" onclick="openMenu()">
+        <span class="sr-only">Open Menu</span>
+        <div class="space-y-2">
+            <span class="block w-full h-0.5 bg-black"></span>
+            <span class="block w-full h-0.5 bg-black"></span>
+            <span class="block w-full h-0.5 bg-black"></span>
+        </div>
+    </button>
+</div>
+
+<!-- Project Details Section -->
+<div class="container mx-auto p-5">
+    <div id="project-details">
+        <!-- Project details will be dynamically inserted here -->
+    </div>
+</div>
+
+<script>
+    const projects = {
+      "green-meadows": {
+        title: "Green Meadows",
+        location: "New York, NY",
+        description: "A beautiful green space located in the heart of New York City.",
+        images: [
+          "event4.jpg",
+          "event5.jpg",
+          "event6.jpg"
+        ]
+      },
+      "sunset-villas": {
+        title: "Sunset Villas",
+        location: "Los Angeles, CA",
+        description: "Luxury villas with stunning sunset views.",
+        images: [
+          "event7.jpg",
+          "event8.jpg",
+          "event9.jpg"
+        ]
+      },
+      "urban-heights": {
+        title: "Urban Heights",
+        location: "Chicago, IL",
+        description: "Modern living spaces in the city center.",
+        images: [
+          "event10.jpg",
+          "event11.jpg",
+          "event12.jpg"
+        ]
+      }
+    };
+
+    function getQueryVariable(variable) {
+      const query = window.location.search.substring(1);
+      const vars = query.split("&");
+      for (let i = 0; i < vars.length; i++) {
+        const pair = vars[i].split("=");
+        if (pair[0] === variable) {
+          return pair[1];
+        }
+      }
+      return false;
+    }
+
+    function loadProjectDetails() {
+      const projectId = getQueryVariable("project");
+      const project = projects[projectId];
+
+      if (project) {
+        document.getElementById("project-details").innerHTML = `
+          <h1 class="text-4xl font-bold">${project.title}</h1>
+          <h2 class="text-2xl font-semibold">${project.location}</h2>
+          <p class="mt-2">${project.description}</p>
+          <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+            ${project.images.map(image => `
+              <img src="${image}" alt="${project.title}" class="w-full rounded-lg">
+            `).join('')}
+          </div>
+        `;
+      } else {
+        document.getElementById("project-details").innerHTML = `<p>Project not found.</p>`;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadProjectDetails);
+</script>
+
+</body>
+</html>

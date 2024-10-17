@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johida Real Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<!-- Hero Section -->
+<section class="relative h-screen w-full overflow-hidden bg-cover bg-center" style="background-image: url('event4.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute top-5 left-10"> <!-- Move slightly away from the left edge -->
+        <img src="event4.jpg" alt="Johida Real Estate Logo" class="w-16 md:w-20">
+    </div>
+
+    <!-- Adjusted Hamburger Menu Position -->
+    <div class="absolute top-5 right-10"> <!-- Move slightly away from the right edge -->
+        <button class="block w-8 h-8 text-white hover:opacity-80" onclick="openMenu()">
+            <span class="sr-only">Open Menu</span>
+            <div class="space-y-2">
+                <span class="block w-full h-0.5 bg-white"></span>
+                <span class="block w-full h-0.5 bg-white"></span>
+                <span class="block w-full h-0.5 bg-white"></span>
+            </div>
+        </button>
+    </div>
+    <div class="flex items-center justify-center h-full text-center px-4">
+        <h1 class="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-josefin-sans">
+            TRANSFORMING <br>
+            FINANCIAL LANDSCAPES <br>
+            INTO REAL ESTATE
+        </h1>
+    </div>
+</section>
+<script>function redirectToMenuPage() {
+        // Redirects to the navigation menu page
+        window.location.href = 'navbar.html';
+    }</script>
+<!-- Who We Are Section -->
+<section class="who-we-are-section py-12 px-8 md:px-24 bg-gray-100">
+    <div class="text-section">
+        <h2 class="section-title">Who We Are</h2>
+        <p class="section-text">
+            JOHIDA specializes in innovative real estate solutions. Driven by a passion for community development and a deep understanding of the real estate market, we empower our clients to seize opportunities within the domestic real estate landscape. Our dedicated team works tirelessly to help you achieve your investment goals and maximize your returns, ensuring your journey in real estate is both profitable and rewarding.
+        </p>
+    </div>
+</section>
+
+<!-- Our Vision Section -->
+<section class="our-vision-section flex flex-col md:flex-row items-center py-12 px-8 md:px-24 bg-gray-100">
+    <div class="image-container">
+        <img src="event4.jpg" alt="Vision Image" class="vision-image">
+    </div>
+    <div class="text-content">
+        <h2 class="section-title">OUR VISION</h2>
+        <h3 class="highlighted-title">WE BELIEVE IN THE POTENTIAL OF INNOVATIVE REAL ESTATE SOLUTIONS.</h3>
+        <p class="section-text">
+            At Johida, we envision a future where strategic investments transform communities and create lasting value. Our commitment to excellence drives us to cultivate a talented workforce dedicated to upholding the highest professional standards. We strive to empower our clients with cutting-edge investment programs and services that adapt to the ever-evolving real estate landscape. By staying attuned to market trends and developments, we provide insightful guidance, helping our clients navigate their investment journeys with confidence and success.
+        </p>
+        <!-- Centered "About" Button Section -->
+        <div class="about-section">
+            <h2 class="about-title">About</h2>
+            <div class="arrow-container">
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS Styles -->
+<style>
+    /* Section Styling */
+ .who-we-are-section, .our-vision-section {
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+     max-width: 95%;
+     margin: 0 auto;
+     padding: 1rem;
+ }
+
+ /* "Who We Are" Section */
+ .text-section {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 1rem;
+     text-align: left;
+ }
+ .section-title {
+     font-size: 1.8rem;
+     font-weight: bold;
+     color: #333;
+     margin-left: 5%; /* Align to the left */
+ }
+ .section-text {
+     font-size: 1rem;
+     line-height: 1.6;
+     color: #555;
+     max-width: 800px;
+     margin: 0 auto;
+     text-align: left;
+ }
+
+ /* "Our Vision" Section */
+ .our-vision-section {
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+     max-width: 95%;
+     margin: 0 auto;
+     padding: 1rem;
+ }
+
+ .image-container {
+     width: 100%;
+     max-width: 600px;
+     display: flex;
+     justify-content: center;
+ }
+ .vision-image {
+     width: 100%;
+     height: 679px; /* Fixed height */
+     object-fit: cover;
+     border-radius: 12px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Responsive Alignment */
+ .text-content {
+     text-align: left;
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     max-width: 800px;
+     margin: 0 auto;
+ }
+ .highlighted-title {
+     font-size: 2rem;
+     font-weight: bold;
+     color: #111;
+     margin-top: 0.5rem;
+ }
+ .section-text {
+     font-size: 1rem;
+     line-height: 1.6;
+ }
+
+ /* "About" Section Button Styling */
+ .about-section {
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+     margin-top: 2rem;
+ }
+ .about-title {
+     font-size: 1.2rem;
+     font-weight: bold;
+ }
+ .arrow-container {
+     width: 40px;
+     height: 40px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #E195D5;
+     border-radius: 50%;
+ }
+ .arrow {
+     width: 15px;
+     height: 15px;
+     border-left: 2px solid white;
+     border-bottom: 2px solid white;
+     transform: rotate(45deg);
+ }
+
+ /* Responsive Layouts */
+ @media (min-width: 768px) {
+     .who-we-are-section, .our-vision-section {
+         flex-direction: row;
+         align-items: center;
+     }
+     .text-section, .text-content {
+         text-align: left;
+         flex: 1;
+     }
+     .section-title {
+         font-size: 2rem;
+         margin-left: 0;
+     }
+     .highlighted-title {
+         font-size: 2.5rem;
+     }
+     .section-text {
+         font-size: 1.125rem;
+     }
+     .image-container {
+         justify-content: flex-start;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .section-title {
+         font-size: 1.6rem;
+     }
+     .highlighted-title {
+         font-size: 1.4rem;
+     }
+     .section-text {
+         font-size: 1rem;
+     }
+     .about-title {
+         font-size: 1rem;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .section-title {
+         font-size: 1.4rem;
+     }
+     .highlighted-title {
+         font-size: 1.2rem;
+     }
+     .section-text {
+         font-size: 0.9rem;
+     }
+     .about-title {
+         font-size: 0.9rem;
+     }
+     .arrow-container {
+         width: 30px;
+         height: 30px;
+     }
+     .arrow {
+         width: 12px;
+         height: 12px;
+     }
+ }
+</style>
+
+<!-- Add GSAP Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+
+<section class="full-width-image-section">
+    <img src="real.jpg" alt="Full width image" class="full-width-image">
+</section>
+<!-- Projects Underway Section -->
+<section class="projects-section py-12 px-4">
+    <h2 class="projects-title">Projects <br><span class="underway-title">Underway</span></h2>
+    <div class="projects-table">
+        <div class="project-header">
+            <span>Project Name</span>
+            <span>Place</span>
+            <span>Start - Finish</span>
+            <span>Total Area</span>
+            <span></span> <!-- Empty for button column -->
+        </div>
+        <div class="project-row">
+            <span>Langano Major</span>
+            <span>Gebeyadar</span>
+            <span>2022-2026</span>
+            <span>458m²</span>
+            <button class="view-project-btn">View Project</button>
+        </div>
+        <div class="project-row">
+            <span>Enat</span>
+            <span>Monopol, Hawassa</span>
+            <span>2022-2028</span>
+            <span>2,255m²</span>
+            <button class="view-project-btn">View Project</button>
+        </div>
+        <div class="project-row">
+            <span>Johida Main</span>
+            <span>82, Shashemene</span>
+            <span>2022-2029</span>
+            <span>4,556m²</span>
+            <button class="view-project-btn">View Project</button>
+        </div>
+    </div>
+    <!-- View All Projects Button -->
+    <div class="view-all-projects">
+        <h2 class="view-all-title">View all projects</h2>
+        <div class="arrow-container">
+            <div class="arrow"></div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS Styles -->
+<style>
+    .full-width-image-section {
+          width: 100%;
+          overflow: hidden;
+          margin-bottom: 2rem; /* Adjust space between image and the next section */
+      }
+      .full-width-image {
+          width: 100%;
+          height: 300px;
+          object-fit: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
+      }
+
+      /* Section Styling */
+      .projects-section {
+          max-width: 95%;
+          margin: 0 auto;
+          text-align: center;
+      }
+
+      /* Title Styling */
+      .projects-title {
+          font-size: 2vw;
+          font-weight: 300;
+          color: #333;
+          line-height: 1.2;
+      }
+      .underway-title {
+          font-weight: bold;
+          color: #333;
+      }
+
+      /* Projects Table */
+      .projects-table {
+          display: grid;
+          gap: 1.5rem;
+          margin-top: 2rem;
+          border-top: 1px solid #ddd;
+      }
+      .project-header, .project-row {
+          display: grid;
+          grid-template-columns: 20% 20% 20% 20% 20%;
+          align-items: center;
+          padding: 1rem;
+          border-bottom: 1px solid #ddd;
+          font-size: 1vw;
+          color: #555;
+      }
+      .project-header {
+          font-weight: bold;
+          color: #333;
+      }
+
+      /* Button Styling */
+      .view-project-btn {
+          padding: 0.5rem 1rem;
+          border: 1px solid #333;
+          border-radius: 20px;
+          font-size: 1vw;
+          font-weight: 500;
+          color: #333;
+          background-color: transparent;
+          cursor: pointer;
+          transition: background-color 0.3s, color 0.3s;
+      }
+      .view-project-btn:hover {
+          background-color: #E195D5;
+          color: white;
+      }
+
+      /* View All Projects Styling */
+      .view-all-projects {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          margin-top: 2rem;
+      }
+      .view-all-title {
+          font-size: 1.5vw;
+          font-weight: bold;
+          color: #333;
+      }
+      .arrow-container {
+          width: 2.5vw;
+          height: 2.5vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #E195D5;
+          border-radius: 50%;
+      }
+      .arrow {
+          width: 1.2vw;
+          height: 1.2vw;
+          border-left: 2px solid white;
+          border-bottom: 2px solid white;
+          transform: rotate(45deg);
+      }
+
+
+ /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .full-width-image {
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .full-width-image {
+            height: 150px;
+        }
+    }
+      /* Responsive adjustments */
+  @media (max-width: 1024px) {
+      .projects-title {
+          font-size: 2rem;
+      }
+      .project-header, .project-row {
+          grid-template-columns: 1fr 1fr;
+          font-size: 1rem;
+      }
+  }
+
+  @media (max-width: 768px) {
+      .projects-title {
+          font-size: 1.8rem;
+      }
+      .projects-table {
+          gap: 1rem;
+      }
+      .project-header, .project-row {
+          grid-template-columns: 1fr;
+          text-align: left;
+          font-size: 1rem;
+          padding: 1rem 0.5rem;
+      }
+      .project-row span, .project-header span {
+          display: block;
+          margin: 0.5rem 0;
+      }
+      .view-project-btn {
+          margin-top: 0.5rem;
+          padding: 0.5rem;
+          width: 100%;
+      }
+      .view-all-title {
+          font-size: 1.5rem;
+      }
+      .arrow-container {
+          width: 2rem;
+          height: 2rem;
+      }
+      .arrow {
+          width: 0.8rem;
+          height: 0.8rem;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .projects-title {
+          font-size: 1.5rem;
+      }
+      .project-header, .project-row {
+          font-size: 0.9rem;
+      }
+      .view-all-title {
+          font-size: 1.2rem;
+      }
+      .view-project-btn {
+          font-size: 0.9rem;
+          padding: 0.5rem;
+      }
+      .arrow-container {
+          width: 1.5rem;
+          height: 1.5rem;
+      }
+      .arrow {
+          width: 0.6rem;
+          height: 0.6rem;
+      }
+  }
+
+</style>
+
+<section class="achievements-section">
+    <h2 class="achievements-title">What we have achieved in numbers</h2>
+    <div class="achievements-container">
+        <div class="achievement-item">
+            <div class="circle-image">
+                <img src="event4.jpg" alt="Achievement 1">
+            </div>
+            <div class="achievement-text">
+                <span class="achievement-bold">60+</span>
+                <span class="achievement-normal">INVESTORS</span>
+            </div>
+        </div>
+        <div class="achievement-item">
+            <div class="circle-image">
+                <img src="image2.jpg" alt="Achievement 2">
+            </div>
+            <div class="achievement-text">
+                <span class="achievement-bold">100</span>
+                <span class="achievement-normal">number of apartments</span>
+            </div>
+        </div>
+        <div class="achievement-item">
+            <div class="circle-image">
+                <img src="image3.jpg" alt="Achievement 3">
+            </div>
+            <div class="achievement-text">
+                <span class="achievement-bold">125m+</span>
+                <span class="achievement-normal">Investments</span>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+.achievements-section {
+max-width: 95%;
+margin: 0 auto;
+padding: 3rem 0;
+text-align: left;
+}
+
+.achievements-title {
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 2rem;
+}
+
+.achievements-container {
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+}
+
+.achievement-item {
+position: relative;
+width: 248px;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.circle-image {
+width: 248px;
+height: 248px;
+border-radius: 50%;
+overflow: hidden;
+}
+
+.circle-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.achievement-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #000;
+text-align: center;
+}
+
+.achievement-bold {
+font-size: 87px;
+font-weight: bold;
+}
+
+.achievement-normal {
+font-size: 45px;
+font-weight: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.achievement-bold {
+font-size: 45px;
+}
+.achievement-normal {
+font-size: 24px;
+}
+}
+</style>
+<script>
+GSAP Animation (script.js)
+// GSAP animation for fading in and scaling up on scroll
+gsap.from(".achievement-item", {
+scrollTrigger: {
+trigger: ".achievements-section",
+start: "top 80%", // Start the animation when 80% of the section is in the viewport
+},
+opacity: 0,
+scale: 0.8,
+duration: 1,
+stagger: 0.3,
+ease: "power2.out"
+});
+</script>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="footer-call">
+            <h3>Call Us</h3>
+        </div>
+        <div class="footer-info">
+            <div class="contact-info">
+                <h4>Contact</h4>
+                <p>Tel.: +2519 253 56325</p>
+                <p>Email: support@johaida.com</p>
+                <div class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="location-info">
+                <h4>Location</h4>
+                <p>Hawassa, Ethiopia</p>
+                <p>Location</p>
+            </div>
+            <div class="policy-info">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookies Policy</a>
+            </div>
+            <div class="copyright">
+                COPYRIGHT ©2024 Johaida Real Estate
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* Dark background to match the design */
+}
+
+.footer-section {
+    background-color: #e8b4d0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.footer-call h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    text-align: right;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.contact-info, .location-info, .policy-info {
+    margin: 0.5rem;
+}
+
+.contact-info h4, .location-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-info p, .location-info p {
+    font-size: 0.9rem;
+}
+
+.policy-info a {
+    display: block;
+    font-size: 0.9rem;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 0.2rem;
+}
+
+.policy-info a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    margin-right: 0.5rem;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-info .copyright {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: #000;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-call {
+        display: none; /* Hide "Call Us" on smaller screens */
+    }
+}
+
+</style>
+
+
+<script>
+    function openMenu() {
+    // Navigate to the navigation menu page
+    window.location.href = 'navbar.html'; // Adjust this to your navigation menu page
+}
+
+    // GSAP animations for smooth entrance
+    gsap.from(".projects-title", { opacity: 0, y: -50, duration: 1 });
+    gsap.from(".project-header span", { opacity: 0, x: -30, duration: 1, stagger: 0.1 });
+    gsap.from(".project-row", { opacity: 0, y: 50, duration: 1, stagger: 0.2 });
+    gsap.from(".view-all-projects", { opacity: 0, y: 50, duration: 1, delay: 1 });
+</script>
+
+
+<!-- GSAP Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+<script>
+    // GSAP Animations
+    gsap.from("h1", { duration: 2, opacity: 0, y: -50, ease: "power3.out" });
+    gsap.from(".rounded-md", { duration: 1.5, opacity: 0, x: -50, ease: "power3.out", delay: 1 });
+    gsap.from(".text-2xl", { scrollTrigger: ".text-2xl", duration: 1, opacity: 0, y: 30, stagger: 0.3 });
+    gsap.from(".text-lg", { scrollTrigger: ".text-lg", duration: 1.2, opacity: 0, x: 30, ease: "power3.out" });
+</script>
+
+</body>
+</html>

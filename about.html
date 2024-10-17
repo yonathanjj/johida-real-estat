@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Johida Real Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .image-container img {
+    width: 90%;
+    max-width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;  /* Stacks images vertically on mobile */
+        align-items: center;
+    }
+}
+
+
+        .content-section {
+            padding: 2rem 5rem;
+            text-align: center;
+        }
+
+        .text-section {
+            max-width: 200%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+                font-size: 2rem;
+
+        }
+
+        .text-column {
+            max-width: 500px;
+            margin: 1rem;
+            text-align: left;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .text-section {
+                flex-direction: row;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+    .content-section {
+        padding: 1rem; /* Adjust padding for mobile */
+    }
+
+    .text-section {
+        font-size: 1.1rem; /* Smaller font size for mobile */
+        max-width: 100%; /* Ensure it doesn't overflow */
+    }
+
+    .text-column {
+        max-width: 90%; /* Adjust column width for mobile */
+        margin: 0.5rem 0; /* Smaller margins */
+    }
+}
+
+          .full-width-image-section {
+          width: 100%;
+          overflow: hidden;
+          margin-bottom: 2rem; /* Adjust space between image and the next section */
+      }
+      .full-width-image {
+          width: 100%;
+          height: 300px;
+          object-fit: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
+      }
+
+         /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .full-width-image {
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .full-width-image {
+            height: 150px;
+        }
+    }
+
+      .mission-vision-goal {
+    padding: 2rem;
+    text-align: center;
+}
+
+.section-header {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+}
+
+.mission, .vision {
+    max-width: 45%; /* Adjust width for left and right sections */
+    margin: 1rem;
+    text-align: center; /* Align text to the left for readability */
+}
+
+.goal {
+    margin-top: 2rem; /* Add space above the goal */
+    text-align: center; /* Center the goal text */
+        max-width: 45%;
+        margin-left: auto; /* Center the element horizontally */
+    margin-right: auto;
+}
+
+h3 {
+    font-size: 2rem; /* Adjust header size */
+}
+
+p {
+    font-size: 1.2rem; /* Adjust paragraph size */
+    font-family: 'Josefin Sans', sans-serif; /* Apply Josefin Sans Extra Light font */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mission, .vision {
+        max-width: 100%; /* Stack the mission and vision on mobile */
+        text-align: center; /* Center text on mobile */
+    }
+}
+@media (max-width: 768px) {
+    .goal {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+
+   /* Overall container styling */
+.how-it-works {
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-it-works-header {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Content container styling */
+.how-it-works-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Card styling */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background-color: #6EBB79;
+    color: white;
+    padding: 2rem;
+    max-width: 450px;
+    min-height: 400px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Navigation arrows styling */
+.navigation-arrows {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Video container styling */
+.video-container {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pink-background {
+    background-color: #F4C2C2; /* Light pink background */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .how-it-works-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card, .video-container {
+        max-width: 90%;
+    }
+
+    .card-container {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .how-it-works-header {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .arrow {
+        font-size: 1.5rem;
+    }
+}
+
+
+        /* Team section styling */
+.team-section {
+    background-color: #E6B8D0; /* Light pink background */
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 9rem;
+    flex-wrap: wrap;
+}
+
+.member {
+    max-width: 300px;
+    text-align: center;
+}
+
+.member img {
+    width: 350px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.member h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #333;
+}
+
+.member p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Trusted Partners section styling */
+.trusted-partners-section {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.trusted-partners-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.partners-logos {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.partners-logos img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.partners-logos img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .team-members, .partners-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<div class="absolute top-5 left-10"> <!-- Move slightly away from the left edge -->
+    <img src="event4.jpg" alt="Johida Real Estate Logo" class="w-16 md:w-20">
+</div>
+
+<!-- Adjusted Hamburger Menu Position -->
+<div class="absolute top-5 right-10"> <!-- Move slightly away from the right edge -->
+    <button class="block w-8 h-8 text-white hover:opacity-80" onclick="openMenu()">
+        <span class="sr-only">Open Menu</span>
+        <div class="space-y-2">
+            <span class="block w-full h-0.5 bg-white"></span>
+            <span class="block w-full h-0.5 bg-white"></span>
+            <span class="block w-full h-0.5 bg-white"></span>
+        </div>
+    </button>
+</div>
+<!-- Main Heading Section -->
+<section class="flex items-center justify-center h-screen text-center px-4">
+    <h1 class="text-black font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-josefin-sans">
+        TRANSFORMING FINANCIAL LANDSCAPES INTO REAL ESTATE
+    </h1>
+</section>
+
+<!-- Images and Text Content Section -->
+<section class="content-section">
+    <!-- Images Section -->
+    <div class="image-container">
+        <img src="event4.jpg" alt="Building Image 1">
+        <img src="event4.jpg" alt="Building Image 2">
+    </div>
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Text Section -->
+    <div class="text-section">
+        <div class="text-column">
+            <h2 class="text-2xl font-bold mb-4">Where Vision Becomes Reality</h2>
+            <p>
+                Johida and its team of experienced executives, combining their extensive knowledge in the real estate sector and in identifying profitable investment opportunities, seeks and selects buildings or land plots to purchase and, through their construction or reconstruction, creates modern bioclimatic buildings in urban areas of high commerciality, thus ensuring high investment returns.
+            </p>
+        </div>
+        <div class="text-column">
+            <p>
+                We prioritize transparency, honesty, and long-term relationships. We believe in fostering trust and open communication with our clients, ensuring they are well-informed and confident in their investment decisions. Our team is dedicated to providing timely information, with the aim of finding the right investment project tailored to each client's goals.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="full-width-image-section">
+    <img src="real.jpg" alt="Full width image" class="full-width-image">
+</section>
+
+<section class="mission-vision-goal">
+    <div class="content">
+        <div class="mission">
+            <h3>Our vision</h3>
+            <p>Johida and its team of experienced executives, combining their extensive knowledge in the real estate sector and in identifying profitable investment opportunities, seeks and selects buildings or land plots to purchase and, through their construction or reconstruction, creates modern bioclimatic buildings in urban areas of high commerciality, thus ensuring high investment returns.
+                We believe in the power of strategic investment.  That's why we take the time to listen, analyse and ultimately recommend the right investment projects every time. Whether you're a seasoned investor looking to diversify your portfolio, or simply investing for the first time, we have the expertise to guide you every step of the way.</p>
+        </div>
+        <div class="vision">
+            <h3>Our Mission</h3>
+            <p>Johida and its team of experienced executives, combining their extensive knowledge in the real estate sector and in identifying profitable investment opportunities, seeks and selects buildings or land plots to purchase and, through their construction or reconstruction, creates modern bioclimatic buildings in urban areas of high commerciality, thus ensuring high investment returns.
+                We believe in the power of strategic investment.  That's why we take the time to listen, analyse and ultimately recommend the right investment projects every time. Whether you're a seasoned investor looking to diversify your portfolio, or simply investing for the first time, we have the expertise to guide you every step of the way.</p>
+        </div>
+    </div>
+    <div class="goal">
+        <h3>Our Goal</h3>
+        <p>Johida and its team of experienced executives, combining their extensive knowledge in the real estate sector and in identifying profitable investment opportunities, seeks and selects buildings or land plots to purchase and, through their construction or reconstruction, creates modern bioclimatic buildings in urban areas of high commerciality, thus ensuring high investment returns.
+            We believe in the power of strategic investment.  That's why we take the time to listen, analyse and ultimately recommend the right investment projects every time. Whether you're a seasoned investor looking to diversify your portfolio, or simply investing for the first time, we have the expertise to guide you every step of the way.</p>
+    </div>
+</section>
+
+<section>
+<div class="how-it-works">
+    <h2 class="how-it-works-header">How It Works</h2>
+    <div class="how-it-works-content">
+        <!-- Left side: Card -->
+        <div class="card-container">
+            <div class="card">
+                <h3>1 Booking a Session</h3>
+                <p>We believe in the power of strategic investment. That’s why we take the time to listen, analyze, and ultimately recommend the right investment projects every time...</p>
+                <div class="navigation-arrows">
+                    <span class="arrow">&#8592;</span>
+                    <span class="arrow">&#8594;</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side: Video with pink background -->
+        <div class="video-container pink-background">
+            <video controls>
+                <source src="your-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+</section>
+
+<section>
+    <div class="team-section">
+        <h2>Our Dedicated Team</h2>
+        <div class="team-members">
+            <div class="member">
+                <img src="path_to_image1.jpg" alt="Charles Niko">
+                <h3>Charles Niko</h3>
+                <p>Executive CEO and Founder</p>
+            </div>
+            <div class="member">
+                <img src="path_to_image2.jpg" alt="Jhon Doe">
+                <h3>Jhon Doe</h3>
+                <p>Chairman and Co-Founder</p>
+            </div>
+            <div class="member">
+                <img src="path_to_image3.jpg" alt="Marry James">
+                <h3>Marry James</h3>
+                <p>CEO and Marketing Director</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="trusted-partners-section">
+        <h2>Trusted Partners</h2>
+        <div class="partners-logos">
+            <img src="path_to_logo1.png" alt="Partner 1">
+            <img src="path_to_logo2.png" alt="Partner 2">
+            <img src="path_to_logo3.png" alt="Partner 3">
+            <!-- Add more partner logos as needed -->
+        </div>
+    </div>
+</section>
+
+<script>
+
+    function openMenu() {
+    // Navigate to the navigation menu page
+    window.location.href = 'navbar.html'; // Adjust this to your navigation menu page
+}
+
+    let currentCard = 1;
+    const totalCards = 5;
+
+    function nextCard() {
+    document.getElementById(`card${currentCard}`).style.display = 'none'; // Hide current card
+    currentCard = currentCard < totalCards ? currentCard + 1 : 1; // Go to the next card, loop back if at the end
+    document.getElementById(`card${currentCard}`).style.display = 'block'; // Show next card
+    }
+
+</script>
+</body>
+</html>
