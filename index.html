@@ -15,14 +15,14 @@
 <body class="bg-gray-100 font-sans">
 
 <!-- Hero Section -->
-<section class="relative h-screen w-full overflow-hidden bg-cover bg-center" style="background-image: url('event4.jpg');">
+<section class="relative h-screen w-full overflow-hidden bg-cover bg-center" style="background-image: url('home1.jpg');">
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="absolute top-5 left-10"> <!-- Move slightly away from the left edge -->
-        <img src="event4.jpg" alt="Johida Real Estate Logo" class="w-16 md:w-20">
+        <img src="jj.png" alt="Johida Real Estate Logo" class="w-20 md:w-24">
     </div>
 
     <!-- Adjusted Hamburger Menu Position -->
-    <div class="absolute top-5 right-10"> <!-- Move slightly away from the right edge -->
+    <div class="absolute top-10 right-10"> <!-- Move slightly away from the right edge -->
         <button class="block w-8 h-8 text-white hover:opacity-80" onclick="openMenu()">
             <span class="sr-only">Open Menu</span>
             <div class="space-y-2">
@@ -53,11 +53,14 @@
         </p>
     </div>
 </section>
-
+<br>
+<br>
+<br>
+<br>
 <!-- Our Vision Section -->
 <section class="our-vision-section flex flex-col md:flex-row items-center py-12 px-8 md:px-24 bg-gray-100">
     <div class="image-container">
-        <img src="event4.jpg" alt="Vision Image" class="vision-image">
+        <img src="home2.jpg" alt="Vision Image" class="vision-image">
     </div>
     <div class="text-content">
         <h2 class="section-title">OUR VISION</h2>
@@ -78,84 +81,96 @@
 <!-- CSS Styles -->
 <style>
     /* Section Styling */
- .who-we-are-section, .our-vision-section {
+ .who-we-are-section {
      display: flex;
-     flex-direction: column;
+     justify-content: center; /* Center the content */
+     align-items: center; /* Center vertically if height allows */
      gap: 2rem;
      max-width: 95%;
      margin: 0 auto;
-     padding: 1rem;
- }
+     padding: 2rem; /* Increased padding for better spacing */
+      border-radius: 10px; /* Add some rounding to the corners */
+  }
 
  /* "Who We Are" Section */
  .text-section {
      display: flex;
      flex-direction: column;
-     align-items: center;
-     gap: 1rem;
-     text-align: left;
+     align-items: center; /* Centered alignment for the title and text */
+     gap: 1.5rem; /* Increased gap for better separation */
+     text-align: center; /* Center text alignment for better look */
  }
+
  .section-title {
-     font-size: 1.8rem;
+     font-size: 2.4rem; /* Increased font size for the title */
      font-weight: bold;
      color: #333;
-     margin-left: 5%; /* Align to the left */
+     margin: 0; /* Removed margin for better centering */
+     padding: 0.5rem 0; /* Added padding for better touch */
+     border-bottom: 2px solid #E195D5; /* Underline effect with color */
  }
+
  .section-text {
-     font-size: 1rem;
-     line-height: 1.6;
+     font-size: 1.2rem; /* Slightly larger font size for readability */
+     line-height: 1.8; /* Increased line height for better readability */
      color: #555;
      max-width: 800px;
      margin: 0 auto;
-     text-align: left;
+     text-align: center; /* Center the text */
+     padding: 0 1rem; /* Padding on the sides for better text flow */
  }
 
- /* "Our Vision" Section */
- .our-vision-section {
-     display: flex;
-     flex-direction: column;
-     gap: 2rem;
-     max-width: 95%;
-     margin: 0 auto;
-     padding: 1rem;
- }
 
- .image-container {
-     width: 100%;
-     max-width: 600px;
-     display: flex;
-     justify-content: center;
- }
- .vision-image {
-     width: 100%;
-     height: 679px; /* Fixed height */
-     object-fit: cover;
-     border-radius: 12px;
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
- }
+  /* "Our Vision" Section */
+.our-vision-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+}
 
- /* Responsive Alignment */
- .text-content {
-     text-align: left;
-     display: flex;
-     flex-direction: column;
-     gap: 1rem;
-     max-width: 800px;
-     margin: 0 auto;
- }
- .highlighted-title {
-     font-size: 2rem;
-     font-weight: bold;
-     color: #111;
-     margin-top: 0.5rem;
- }
- .section-text {
-     font-size: 1rem;
-     line-height: 1.6;
- }
+/* Image Container */
+.image-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+}
 
- /* "About" Section Button Styling */
- .about-section {
+.vision-image {
+    width: 100%;
+    height: 679px; /* Fixed height */
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Alignment */
+.text-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto; /* Center the text content */
+}
+
+.highlighted-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+    margin-top: 0.5rem;
+}
+
+.section-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* "About" Section Button Styling */
+.about-section {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -192,68 +207,68 @@
 }
 
 
- /* Responsive Layouts */
- @media (min-width: 768px) {
-     .who-we-are-section, .our-vision-section {
-         flex-direction: row;
-         align-items: center;
-     }
-     .text-section, .text-content {
-         text-align: left;
-         flex: 1;
-     }
-     .section-title {
-         font-size: 2rem;
-         margin-left: 0;
-     }
-     .highlighted-title {
-         font-size: 2.5rem;
-     }
-     .section-text {
-         font-size: 1.125rem;
-     }
-     .image-container {
-         justify-content: flex-start;
-     }
- }
+  /* Responsive Layouts */
+  @media (min-width: 768px) {
+      .who-we-are-section, .our-vision-section {
+          flex-direction: row;
+          align-items: center;
+      }
+      .text-section, .text-content {
+          text-align: left;
+          flex: 1;
+      }
+      .section-title {
+          font-size: 2rem;
+          margin-left: 0;
+      }
+      .highlighted-title {
+          font-size: 2.5rem;
+      }
+      .section-text {
+          font-size: 1.125rem;
+      }
+      .image-container {
+          justify-content: flex-start;
+      }
+  }
 
- @media (max-width: 768px) {
-     .section-title {
-         font-size: 1.6rem;
-     }
-     .highlighted-title {
-         font-size: 1.4rem;
-     }
-     .section-text {
-         font-size: 1rem;
-     }
-     .about-title {
-         font-size: 1rem;
-     }
- }
+  @media (max-width: 768px) {
+      .section-title {
+          font-size: 1.6rem;
+      }
+      .highlighted-title {
+          font-size: 1.4rem;
+      }
+      .section-text {
+          font-size: 1rem;
+      }
+      .about-title {
+          font-size: 1rem;
+      }
+  }
 
- @media (max-width: 480px) {
-     .section-title {
-         font-size: 1.4rem;
-     }
-     .highlighted-title {
-         font-size: 1.2rem;
-     }
-     .section-text {
-         font-size: 0.9rem;
-     }
-     .about-title {
-         font-size: 0.9rem;
-     }
-     .arrow-container {
-         width: 30px;
-         height: 30px;
-     }
-     .arrow {
-         width: 12px;
-         height: 12px;
-     }
- }
+  @media (max-width: 480px) {
+      .section-title {
+          font-size: 1.4rem;
+      }
+      .highlighted-title {
+          font-size: 1.2rem;
+      }
+      .section-text {
+          font-size: 0.9rem;
+      }
+      .about-title {
+          font-size: 0.9rem;
+      }
+      .arrow-container {
+          width: 30px;
+          height: 30px;
+      }
+      .arrow {
+          width: 12px;
+          height: 12px;
+      }
+  }
 </style>
 
 <!-- Add GSAP Script -->
@@ -264,7 +279,7 @@
 <br>
 <br>
 <section class="full-width-image-section">
-    <img src="real.jpg" alt="Full width image" class="full-width-image">
+    <img src="home3.jpg" alt="Full width image" class="full-width-image">
 </section>
 <!-- Projects Underway Section -->
 <section class="projects-section py-12 px-4">
@@ -496,30 +511,40 @@
 
 <section class="achievements">
     <h1>What we have achieved in numbers</h1>
+    <br>
+    <br>
+    <br>
     <div class="circle-grid">
         <div class="circle-item">
-            <div class="circle"></div>
+            <div class="circle">
+                <img src="home4.jpg" alt="Apartment Image 1">
+            </div>
             <div class="text">
                 <span>100</span><br>
                 <span>apartments</span>
             </div>
         </div>
         <div class="circle-item">
-            <div class="circle"></div>
+            <div class="circle">
+                <img src="home5.jpg" alt="Apartment Image 2">
+            </div>
             <div class="text">
-                <span>100</span><br>
-                <span>apartments</span>
+                <span>50</span><br>
+                <span>villas</span>
             </div>
         </div>
         <div class="circle-item">
-            <div class="circle"></div>
+            <div class="circle">
+                <img src="home6.jpg" alt="Apartment Image 3">
+            </div>
             <div class="text">
-                <span>100</span><br>
-                <span>apartments</span>
+                <span>200</span><br>
+                <span>houses</span>
             </div>
         </div>
     </div>
 </section>
+
 
 
 <style>
@@ -545,36 +570,47 @@
      gap: 30px; /* Reduced gap for smaller screens */
  }
 
- .circle-item {
-     display: flex;
-     align-items: center; /* Align items vertically centered */
-     justify-content: flex-start; /* Align items to the start */
-     flex-direction: row; /* Ensure items stay in a row */
- }
+.circle {
+    width: 248px;
+    height: 248px;
+    border-radius: 50%;
+    overflow: hidden; /* Ensure the image stays inside the circle */
+    margin-right: 20px; /* Space between the circle and text */
+}
 
- .circle {
-     width: 248px;
-     height: 248px;
-     border-radius: 50%;
-     background-color: #f0f0f0;
-     margin-right: 20px; /* Space between the circle and text */
- }
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the circle without distortion */
+    border-radius: 50%; /* Keep the image within a circular shape */
+}
 
- .text {
-     text-align: left; /* Align text to the left */
- }
+.circle-item {
+    display: flex;
+    align-items: center; /* Vertically align the circle and text */
+    justify-content: flex-start; /* Align items to the left (image first, text second) */
+    flex-direction: row; /* Keep the image on the left and text on the right */
+}
 
- .text span:first-child {
-     font-size: 65px; /* Size of the '100' text */
-     font-weight: bold; /* Make '100' bold */
-     font-family: 'Josefin Sans', sans-serif; /* Font family for '100' */
- }
+.circle {
+    margin-right: 20px; /* Space between the image and text */
+}
 
- .text span:last-child {
-     font-size: 30px; /* Size of 'apartments' text */
-     font-weight: 300; /* Light weight for 'apartments' */
-     font-family: 'Josefin Sans', sans-serif; /* Font family for 'apartments' */
- }
+.text {
+    text-align: left; /* Ensure the text stays aligned to the left */
+}
+
+.text span:first-child {
+    font-size: 65px; /* Size of the '100' text */
+    font-weight: bold; /* Make '100' bold */
+    font-family: 'Josefin Sans', sans-serif; /* Font family for '100' */
+}
+
+.text span:last-child {
+    font-size: 30px; /* Size of 'apartments' text */
+    font-weight: 300; /* Light weight for 'apartments' */
+    font-family: 'Josefin Sans', sans-serif; /* Font family for 'apartments' */
+}
 
  @media (max-width: 768px) {
      h1 {
