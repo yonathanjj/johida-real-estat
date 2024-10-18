@@ -333,7 +333,7 @@ p {
 
 .partners-logos {
     display: flex;
-    gap: 1.5rem;
+    gap: 5.2rem;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -361,17 +361,17 @@ p {
 <body class="bg-gray-100 font-sans">
 
 <div class="absolute top-5 left-10"> <!-- Move slightly away from the left edge -->
-    <img src="event4.jpg" alt="Johida Real Estate Logo" class="w-16 md:w-20">
+    <img src="jj.png" alt="Johida Real Estate Logo" class="w-20 md:w-24">
 </div>
 
 <!-- Adjusted Hamburger Menu Position -->
-<div class="absolute top-5 right-10"> <!-- Move slightly away from the right edge -->
+<div class="absolute top-10 right-10"> <!-- Move slightly away from the right edge -->
     <button class="block w-8 h-8 text-white hover:opacity-80" onclick="openMenu()">
         <span class="sr-only">Open Menu</span>
         <div class="space-y-2">
-            <span class="block w-full h-0.5 bg-white"></span>
-            <span class="block w-full h-0.5 bg-white"></span>
-            <span class="block w-full h-0.5 bg-white"></span>
+            <span class="block w-full h-0.5 bg-black"></span>
+            <span class="block w-full h-0.5 bg-black"></span>
+            <span class="block w-full h-0.5 bg-black"></span>
         </div>
     </button>
 </div>
@@ -386,8 +386,8 @@ p {
 <section class="content-section">
     <!-- Images Section -->
     <div class="image-container">
-        <img src="event4.jpg" alt="Building Image 1">
-        <img src="event4.jpg" alt="Building Image 2">
+        <img src="about1.jpg" alt="Building Image 1">
+        <img src="about2.jpg" alt="Building Image 2">
     </div>
 <br>
     <br>
@@ -412,7 +412,7 @@ p {
 </section>
 
 <section class="full-width-image-section">
-    <img src="real.jpg" alt="Full width image" class="full-width-image">
+    <img src="about3.jpg" alt="Full width image" class="full-width-image">
 </section>
 
 <section class="mission-vision-goal">
@@ -436,48 +436,49 @@ p {
 </section>
 
 <section>
-<div class="how-it-works">
-    <h2 class="how-it-works-header">How It Works</h2>
-    <div class="how-it-works-content">
-        <!-- Left side: Card -->
-        <div class="card-container">
-            <div class="card">
-                <h3>1 Booking a Session</h3>
-                <p>We believe in the power of strategic investment. That’s why we take the time to listen, analyze, and ultimately recommend the right investment projects every time...</p>
-                <div class="navigation-arrows">
-                    <span class="arrow">&#8592;</span>
-                    <span class="arrow">&#8594;</span>
+    <div class="how-it-works">
+        <h2 class="how-it-works-header">How It Works</h2>
+        <div class="how-it-works-content">
+            <!-- Left side: Card -->
+            <div class="card-container">
+                <div class="card">
+                    <h3 id="card-title">1 Booking a Session</h3>
+                    <p id="card-description">We believe in the power of strategic investment. That’s why we take the time to listen, analyze, and ultimately recommend the right investment projects every time...</p>
+                    <div class="navigation-arrows">
+                        <span class="arrow" onclick="prevCard()">&#8592;</span>
+                        <span class="arrow" onclick="nextCard()">&#8594;</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Right side: Video with pink background -->
-        <div class="video-container pink-background">
-            <video controls>
-                <source src="your-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <!-- Right side: Video with pink background -->
+            <div class="video-container pink-background">
+                <video controls>
+                    <source src="your-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
     </div>
-</div>
 </section>
+
 
 <section>
     <div class="team-section">
         <h2>Our Dedicated Team</h2>
         <div class="team-members">
             <div class="member">
-                <img src="path_to_image1.jpg" alt="Charles Niko">
+                <img src="about4.jpg" alt="Charles Niko">
                 <h3>Charles Niko</h3>
                 <p>Executive CEO and Founder</p>
             </div>
             <div class="member">
-                <img src="path_to_image2.jpg" alt="Jhon Doe">
+                <img src="about5.jpg" alt="Jhon Doe">
                 <h3>Jhon Doe</h3>
                 <p>Chairman and Co-Founder</p>
             </div>
             <div class="member">
-                <img src="path_to_image3.jpg" alt="Marry James">
+                <img src="about6.jpg" alt="Marry James">
                 <h3>Marry James</h3>
                 <p>CEO and Marketing Director</p>
             </div>
@@ -487,9 +488,9 @@ p {
     <div class="trusted-partners-section">
         <h2>Trusted Partners</h2>
         <div class="partners-logos">
-            <img src="path_to_logo1.png" alt="Partner 1">
-            <img src="path_to_logo2.png" alt="Partner 2">
-            <img src="path_to_logo3.png" alt="Partner 3">
+            <img src="logo1.png" alt="Partner 1">
+            <img src="logo2.png" alt="Partner 2">
+            <img src="logo3.png" alt="Partner 3">
             <!-- Add more partner logos as needed -->
         </div>
     </div>
@@ -680,14 +681,49 @@ p {
     window.location.href = 'navbar.html'; // Adjust this to your navigation menu page
 }
 
-    let currentCard = 1;
-    const totalCards = 5;
-
-    function nextCard() {
-    document.getElementById(`card${currentCard}`).style.display = 'none'; // Hide current card
-    currentCard = currentCard < totalCards ? currentCard + 1 : 1; // Go to the next card, loop back if at the end
-    document.getElementById(`card${currentCard}`).style.display = 'block'; // Show next card
+   const cards = [
+    {
+        title: "1 Booking a Session",
+        description: "We believe in the power of strategic investment. That’s why we take the time to listen, analyze, and ultimately recommend the right investment projects every time..."
+    },
+    {
+        title: "2 Understanding Your Needs",
+        description: "We work closely with you to understand your unique investment needs and objectives."
+    },
+    {
+        title: "3 Tailored Recommendations",
+        description: "Our team develops tailored investment strategies based on your specific requirements."
+    },
+    {
+        title: "4 Implementing the Strategy",
+        description: "We help you implement your investment strategy effectively and efficiently."
+    },
+    {
+        title: "5 Monitoring Progress",
+        description: "We continuously monitor your investments and provide regular updates."
     }
+];
+
+let currentCard = 0;
+
+function updateCard() {
+    document.getElementById('card-title').innerText = cards[currentCard].title;
+    document.getElementById('card-description').innerText = cards[currentCard].description;
+}
+
+function nextCard() {
+    currentCard = (currentCard + 1) % cards.length; // Loop back to the first card
+    updateCard();
+}
+
+function prevCard() {
+    currentCard = (currentCard - 1 + cards.length) % cards.length; // Loop back to the last card
+    updateCard();
+}
+
+// Initialize the first card on page load
+document.addEventListener("DOMContentLoaded", updateCard);
+
 
 </script>
 </body>
