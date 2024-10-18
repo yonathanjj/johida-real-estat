@@ -184,15 +184,20 @@
         </form>
     </div>
 </div>
+
 <!-- Footer Section -->
 <footer class="footer-section">
     <div class="footer-content">
-        <div class="footer-logo">
-            <img src="logo.png" alt="Logo">
+        <div class="footer-header">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="footer-call">
+                <h3>Call Us</h3>
+            </div>
         </div>
-        <div class="footer-call">
-            <h3>Call Us</h3>
-        </div>
+        <!-- Divider line under logo and call us text -->
+        <hr class="footer-divider">
         <div class="footer-info">
             <div class="contact-info">
                 <h4>Contact</h4>
@@ -208,116 +213,155 @@
                 <p>Hawassa, Ethiopia</p>
                 <p>Location</p>
             </div>
-            <div class="policy-info">
+            <div class="policy-copyright">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Cookies Policy</a>
-            </div>
-            <div class="copyright">
-                COPYRIGHT ©2024 Johaida Real Estate
+                <span>COPYRIGHT ©2024 Johaida Real Estate</span>
             </div>
         </div>
     </div>
 </footer>
+
 <style>
-    footer body {
-     font-family: Arial, sans-serif;
-     background-color: #1e1e1e; /* Dark background to match the design */
- }
+    /* Scope all styles to the footer-section */
+    .footer-section {
+        background-color: #e8b4d0;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
- .footer-section {
-     background-color: #e8b4d0;
-     padding: 2rem;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
+    .footer-section .footer-content {
+        max-width: 97%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 
- .footer-content {
-     max-width: 1200px;
-     width: 100%;
-     display: grid;
-     grid-template-columns: 1fr auto;
-     gap: 1rem;
- }
+    .footer-section .footer-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
 
- .footer-logo img {
-     width: 50px;
-     height: auto;
- }
+    .footer-section .footer-logo img {
+        width: 50px;
+        height: auto;
+    }
 
- .footer-call h3 {
-     font-size: 1.5rem;
-     font-weight: bold;
-     color: #000;
-     text-align: right;
- }
+    .footer-section .footer-call h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #000;
+        text-align: right;
+    }
 
- .footer-info {
-     display: flex;
-     justify-content: space-between;
-     flex-wrap: wrap;
-     width: 100%;
- }
+    /* Divider line under logo and call us */
+    .footer-section .footer-divider {
+        width: 100%;
+        border: none;
+        border-top: 1px solid #000;
+        margin-bottom: 1rem;
+    }
 
- .contact-info, .location-info, .policy-info {
-     margin: 0.5rem;
- }
+    .footer-section .footer-info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 
- .contact-info h4, .location-info h4 {
-     font-size: 1.2rem;
-     margin-bottom: 0.5rem;
-     font-weight: bold;
- }
+    .footer-section .contact-info, .footer-section .location-info {
+        margin: 0.5rem;
+    }
 
- .contact-info p, .location-info p {
-     font-size: 0.9rem;
- }
+    .footer-section .contact-info h4, .footer-section .location-info h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
 
- .policy-info a {
-     display: block;
-     font-size: 0.9rem;
-     color: #000;
-     text-decoration: none;
-     margin-bottom: 0.2rem;
- }
+    .footer-section .contact-info p, .footer-section .location-info p {
+        font-size: 0.9rem;
+    }
 
- .policy-info a:hover {
-     text-decoration: underline;
- }
+    .footer-section .social-icons {
+        margin-top: 1rem;
+        display: flex;
+    }
 
- .social-icons {
-     margin-top: 1rem;
- }
+    .footer-section .social-icons a {
+        margin-right: 0.5rem;
+    }
 
- .social-icons a {
-     margin-right: 0.5rem;
- }
+    .footer-section .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
 
- .social-icons img {
-     width: 24px;
-     height: 24px;
- }
+    /* Align copyright and policies horizontally */
+    .footer-section .policy-copyright {
+        display: flex;
+        align-items: center;
+        gap: 1rem; /* Space between elements */
+    }
 
- .footer-info .copyright {
-     font-size: 0.8rem;
-     margin-top: 1rem;
-     color: #000;
-     text-align: center;
-     width: 100%;
- }
+    .footer-section .policy-copyright a {
+        font-size: 0.9rem;
+        color: #000;
+        text-decoration: none;
+        margin-right: 1rem;
+    }
 
- /* Responsive adjustments */
- @media (max-width: 768px) {
-     .footer-content {
-         grid-template-columns: 1fr;
-         text-align: center;
-     }
-     .footer-call {
-         display: none; /* Hide "Call Us" on smaller screens */
-     }
- }
+    .footer-section .policy-copyright a:hover {
+        text-decoration: underline;
+    }
 
+    .footer-section .policy-copyright span {
+        font-size: 0.9rem;
+        color: #000;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .footer-section .footer-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+            justify-items: center; /* Center content horizontally */
+        }
+
+        .footer-section .footer-header {
+            flex-direction: column; /* Stack logo and call vertically */
+        }
+
+        .footer-section .footer-call {
+            text-align: center; /* Center "Call Us" text */
+            margin-top: 1rem;
+        }
+
+        .footer-section .footer-info {
+            flex-direction: column;
+            align-items: center; /* Center all sections vertically */
+            text-align: center; /* Center the text in each section */
+        }
+
+        .footer-section .policy-copyright {
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            gap: 0.5rem; /* Reduce the space between the elements */
+        }
+
+        .footer-section .social-icons {
+            justify-content: center; /* Center the social icons */
+            margin-top: 1rem;
+        }
+    }
 </style>
+
+
 <script>
     function openMenu() {
    // Navigate to the navigation menu page
