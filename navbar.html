@@ -159,91 +159,91 @@
             transform: rotate(-45deg);
         }
 
+
+        /* Mobile Responsiveness */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    /* General body adjustments for mobile */
+    /* Adjust body for mobile */
     body {
-        padding: 10px; /* Add some padding to avoid content touching edges */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        overflow-y: auto; /* Enable vertical scrolling */
+        padding: 20px;
     }
 
-    /* Logo */
+    /* Logo size and position remains the same */
     .logo {
-        width: 50px; /* Smaller logo for mobile */
-        top: 10px; /* Adjusted position for better spacing */
-        left: 10px; /* Adjusted position for better spacing */
+        top: 20px;
+        left: 20px;
+        width: 80px; /* Reduce logo size */
     }
 
-    /* Navigation Menu */
+    /* Navigation Menu on Mobile */
     .nav-bar {
-        width: 100%; /* Full width for mobile */
-        padding-left: 0; /* No padding on the left for full width */
-        padding-top: 10px; /* Added top padding for spacing */
-        align-items: flex-start; /* Align items to start */
+        width: 100%;
+        align-items: center;
+        padding: 0;
+        text-align: center;
+        margin-top: 100px; /* Push navigation down */
     }
 
     .nav-bar h1 {
-        font-size: 1.8em; /* Further reduced font size for mobile */
-        margin-bottom: 10px; /* Space between navigation links */
+        font-size: 2.5em; /* Reduce heading size */
     }
 
     .nav-bar h1 a {
-        display: block; /* Ensure each link is on a new line */
-        margin: 5px 0; /* Space out the links */
-        opacity: 1; /* Make visible */
-        transition: transform 0.3s ease, color 0.3s ease;
+        font-size: 1.5em; /* Reduce text size */
     }
 
-    /* Vertical Divider Line */
+    /* Remove divider on mobile */
     .divider {
-        display: none; /* Hide divider on mobile */
+        display: none;
     }
 
-    /* Image Gallery */
+    /* Image Gallery for Mobile */
     .image-gallery {
-        width: 100%; /* Full width for mobile */
         flex-direction: column; /* Stack images vertically */
-        gap: 15px; /* Increased gap for better spacing */
+        width: 100%; /* Full width for images */
+        gap: 20px;
+        align-items: center;
     }
 
     .image {
-        width: 90%; /* Adjusted for mobile */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 15px; /* Slightly smaller border radius */
+        width: 90%; /* Make images responsive */
+        height: auto;
     }
 
-    /* Adjust social icons size */
+    /* Social Icons and Contact Info */
+    .contact-info,
     .social-icons {
-        display: flex; /* Align icons in a row */
-        justify-content: flex-start; /* Align to start */
+        position: static; /* Remove absolute positioning */
+        margin: 20px 0;
+        text-align: center;
+        opacity: 1; /* Ensure visible on mobile */
     }
 
-    .social-icons img {
-        width: 25px; /* Adjust size for better visibility */
-        margin-right: 8px; /* Maintain spacing */
-    }
-
-    /* Contact Info */
-    .contact-info {
-        text-align: center; /* Center text for better visibility */
-        width: 100%; /* Full width for mobile */
-        bottom: 30px; /* Adjusted position */
-        right: 0; /* Center alignment */
-    }
-
-    /* Hamburger Menu */
+    /* Hamburger Menu remains unchanged */
     .hamburger-menu {
-        top: 10px; /* Adjusted position for better spacing */
-        right: 10px; /* Adjusted position for better spacing */
+        top: 40px;
+        right: 20px;
     }
 
     .hamburger-icon {
-        width: 35px; /* Adjusted size for mobile */
-        height: 35px; /* Adjusted size for mobile */
+        width: 35px; /* Adjust size for mobile */
+        height: 35px;
     }
 
     .line {
-        height: 4px; /* Slightly increased thickness for visibility */
+        height: 3px; /* Make lines thinner */
+    }
+
+    .line:nth-child(1), .line:nth-child(2) {
+        top: 8px; /* Adjust top position */
     }
 }
+
 
     </style>
 </head>
